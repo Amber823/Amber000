@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(curl -s http://localhost:3001/api/admin/experiences -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjA4ODE4OSwiZXhwIjoxNzc2NjkyOTg5fQ.smQPBivkm_hG42GN4OmOO7Wkc8x9L5hf8wBivQzmcN0')",
+      "Bash(curl -s http://localhost:3001/api/admin/education -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjA4ODE4OSwiZXhwIjoxNzc2NjkyOTg5fQ.smQPBivkm_hG42GN4OmOO7Wkc8x9L5hf8wBivQzmcN0')",
+      "Bash(curl -s http://localhost:3001/api/admin/certificates -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjA4ODE4OSwiZXhwIjoxNzc2NjkyOTg5fQ.smQPBivkm_hG42GN4OmOO7Wkc8x9L5hf8wBivQzmcN0')",
+      "Bash(curl -s http://localhost:3001/api/health)"
+    ]
+  }
+}

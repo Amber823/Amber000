@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amber - 产品数据分析师 Portfolio & Blog">
+    <meta name="keywords" content="数据分析师, 产品分析, SQL, Python, Tableau">
+    <meta name="author" content="Amber">
+    <title>Amber - 产品数据分析师</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        macaron: {
+                            pink: '#FFB5C5',
+                            'pink-light': '#FFD9E3',
+                            'pink-dark': '#F5A0B5',
+                            blue: '#A8D8EA',
+                            'blue-light': '#C5E8F5',
+                            'blue-dark': '#8BC5D9',
+                            green: '#B5EAD7',
+                            'green-light': '#D4F5E9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 移动端菜单按钮 -->
+    <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="main-layout">
+        <!-- 侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar-container">
+                    <img src="/public/assets/avatar.jpg" alt="Amber" class="avatar" id="sidebarAvatar"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-placeholder" style="display: none;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <h1 class="sidebar-name" id="sidebarName">屈佳欣 Amber</h1>
+                <p class="sidebar-title" id="sidebarTitle">产品数据分析师</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" data-section="home">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-section="about">
+                            <i class="fas fa-user"></i>
+                            <span>关于我</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link" data-section="experience">
+                            <i class="fas fa-briefcase"></i>
+                            <span>工作经历</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education" class="nav-link" data-section="education">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>教育背景</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link" data-section="projects">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>项目经历</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#certificates" class="nav-link" data-section="certificates">
+                            <i class="fas fa-award"></i>
+                            <span>证书荣誉</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link" data-section="skills">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>技能特长</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#works" class="nav-link" data-section="works">
+                            <i class="fas fa-folder-open"></i>
+                            <span>作品展示</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link" data-section="blog">
+                            <i class="fas fa-blog"></i>
+                            <span>工作总结</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#message" class="nav-link" data-section="message">
+                            <i class="fas fa-comments"></i>
+                            <span>留言板</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-section="contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>联系方式</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-socials" id="sidebarSocials">
+                <!-- 社交链接动态渲染 -->
+            </div>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2024 Amber</p>
+                <p class="mt-1">All Rights Reserved</p>
+            </div>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 英雄区 -->
+            <section id="home" class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="parallax-layer parallax-layer-1" data-speed="0.3"></div>
+                <div class="parallax-layer parallax-layer-2" data-speed="0.5"></div>
+
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        <i class="fas fa-sparkles mr-1"></i> 欢迎访问我的个人网站
+                    </span>
+                    <h2 class="hero-title" id="heroTitle">你好，我是屈佳欣 (Amber)</h2>
+                    <p class="hero-subtitle" id="heroSubtitle">产品数据分析师 | 数据驱动决策</p>
+                    <p class="hero-description" id="heroDescription">
+                        热爱数据，专注于用数据洞察驱动产品优化与业务增长。
+                        擅长SQL、Python、Tableau等数据分析工具，具有丰富的电商、互联网产品分析经验。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#works" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i> 查看作品
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> 联系我
+                        </a>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </section>
+
+            <!-- 关于我 -->
+            <section id="about" class="content-section">
+                <div class="section-header">
+                    <span class="section-badge">About Me</span>
+                    <h2 class="section-title">关于我</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="about-image-wrapper">
+                            <div class="about-image-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <h3 id="aboutTitle">数据驱动的产品分析师</h3>
+                        <p id="aboutBio1">
+                            我是一名产品数据分析师，专注于利用数据分析为产品决策提供支持。
+                            拥有3年以上互联网产品数据分析经验，曾服务于电商、社交等多个领域。
+                        </p>
+                        <p id="aboutBio2">
+                            我相信数据是产品的眼睛，通过深入的数据分析，可以发现用户真实需求，
+                            优化产品体验，推动业务增长。让我用数据讲好产品故事。
+                        </p>
+
+                        <div class="about-details" id="aboutDetails">
+                            <div class="detail-item">
+                                <i class="fas fa-user"></i>
+                                <span id="detailName">Amber</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span id="detailTitle">产品数据分析师</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="detailLocation">中国</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span id="detailEmail">amber@example.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 工作经历 -->
+            <section id="experience" class="content-section" style="background: var(--bg-light);">
+                <div class="section-header">
+                    <span class="section-badge">Experience</span>
+                    <h2 class="section-title">工作经历</h2>
+                </div>
+
+                <div class="timeline" id="experienceList">
+                    <!-- 工作经历动态渲染 -->
+                </div>
+            </section>
+
+            <!-- 教育背景 -->
+            <section id="education" class="content-section">
+                <div class="section-header">
+                    <span class="section-badge">Education</span>
+                    <h2 class="section-title">教育背景</h2>
+                </div>
+
+                <div class="education-grid" id="educationList">
+                    <!-- 教育经历动态渲染 -->
+                </div>
+            </section>
+
+            <!-- 项目经历 -->
+            <section id="projects" class="content-section" style="background: var(--bg-light);">
+                <div class="section-header">
+                    <span class="section-badge">Projects</span>
+                    <h2 class="section-title">项目经历</h2>
+                </div>
+
+                <div class="projects-list" id="projectList">
+                    <!-- 项目经历动态渲染 -->
+                </div>
+            </section>
+
+            <!-- 证书荣誉 -->
+            <section id="certificates" class="content-section">
+                <div class="section-header">
+                    <span class="section-badge">Certificates</span>
+                    <h2 class="section-title">证书荣誉</h2>
+                </div>
+
+                <div class="certificates-grid" id="certificateList">
+                    <!-- 证书荣誉动态渲染 -->
+                </div>
+            </section>
+
+            <!-- 技能特长 -->
+            <section id="skills" class="content-section" style="background: var(--bg-light);">
+                <div class="section-header">
+                    <span class="section-badge">Skills</span>
+                    <h2 class="section-title">技能特长</h2>
+                </div>
+
+                <div class="skills-grid" id="skillsGrid">
+                    <!-- 骨架屏 -->
+                    <div class="skeleton-card" style="padding: 24px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 40%; margin-bottom: 12px;"></div>
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                    <div class="skeleton-card" style="padding: 24px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 40%; margin-bottom: 12px;"></div>
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                    <div class="skeleton-card" style="padding: 24px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 40%; margin-bottom: 12px;"></div>
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 作品展示 -->
+            <section id="works" class="content-section">
+                <div class="section-header">
+                    <span class="section-badge">Portfolio</span>
+                    <h2 class="section-title">作品展示</h2>
+                </div>
+
+                <div class="works-grid" id="worksGrid">
+                    <!-- 骨架屏 -->
+                    <div class="skeleton-card" style="background: var(--glass-bg); border-radius: var(--radius-lg); overflow: hidden;">
+                        <div class="skeleton skeleton-image"></div>
+                        <div style="padding: 24px;">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-text" style="margin-top: 12px;"></div>
+                            <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-card" style="background: var(--glass-bg); border-radius: var(--radius-lg); overflow: hidden;">
+                        <div class="skeleton skeleton-image"></div>
+                        <div style="padding: 24px;">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-text" style="margin-top: 12px;"></div>
+                            <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-card" style="background: var(--glass-bg); border-radius: var(--radius-lg); overflow: hidden;">
+                        <div class="skeleton skeleton-image"></div>
+                        <div style="padding: 24px;">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-text" style="margin-top: 12px;"></div>
+                            <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 博客文章 -->
+            <section id="blog" class="content-section" style="background: var(--bg-light);">
+                <div class="section-header">
+                    <span class="section-badge">Blog</span>
+                    <h2 class="section-title">工作总结</h2>
+                </div>
+
+                <div class="blog-filters" id="blogFilters">
+                    <button class="filter-btn active" data-category="all">全部</button>
+                </div>
+
+                <div class="blog-list" id="blogList">
+                    <!-- 骨架屏 -->
+                    <div class="skeleton-card" style="padding: 32px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 30%;"></div>
+                        <div class="skeleton skeleton-title" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                    <div class="skeleton-card" style="padding: 32px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 30%;"></div>
+                        <div class="skeleton skeleton-title" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                    <div class="skeleton-card" style="padding: 32px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 30%;"></div>
+                        <div class="skeleton skeleton-title" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 16px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 留言板 -->
+            <section id="message" class="content-section">
+                <div class="section-header">
+                    <span class="section-badge">Guest Book</span>
+                    <h2 class="section-title">留言板</h2>
+                </div>
+
+                <!-- 留言表单 -->
+                <div class="message-form-wrapper">
+                    <form class="message-form" id="messageForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">你的名字</label>
+                                <input type="text" class="form-input" name="visitorName" placeholder="请输入你的名字" required maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">联系方式（选填）</label>
+                                <input type="text" class="form-input" name="contact" placeholder="邮箱或微信">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">留言内容</label>
+                            <textarea class="form-textarea" name="content" placeholder="写下你想说的话..." required maxlength="1000"></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> 提交留言
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 留言列表 -->
+                <div class="message-list" id="messageList">
+                    <!-- 骨架屏 -->
+                    <div class="skeleton-card" style="padding: 24px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 40%;"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 12px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                    <div class="skeleton-card" style="padding: 24px; background: var(--glass-bg); border-radius: var(--radius-lg);">
+                        <div class="skeleton skeleton-text" style="width: 40%;"></div>
+                        <div class="skeleton skeleton-text" style="margin-top: 12px;"></div>
+                        <div class="skeleton skeleton-text short" style="margin-top: 8px;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 联系方式 -->
+            <section id="contact" class="content-section" style="background: var(--bg-light);">
+                <div class="section-header">
+                    <span class="section-badge">Contact</span>
+                    <h2 class="section-title">联系方式</h2>
+                </div>
+
+                <div class="contact-grid" id="contactGrid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p class="contact-label">邮箱</p>
+                        <p class="contact-value" id="contactEmail">amber@example.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <p class="contact-label">电话</p>
+                        <p class="contact-value" id="contactPhone">-</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p class="contact-label">所在地</p>
+                        <p class="contact-value" id="contactLocation">中国</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 页脚 -->
+            <footer style="text-align: center; padding: 40px 20px; background: var(--bg-white); border-top: 1px solid var(--bg-gray);">
+                <p style="color: var(--text-light); font-size: 0.9rem;">
+                    &copy; 2024 Amber. Made with <i class="fas fa-heart" style="color: var(--macaron-pink);"></i>
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Toast 容器 -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- 博客详情弹窗 -->
+    <div class="modal-overlay" id="blogModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="blogModalTitle">博客详情</h3>
+                <button class="modal-close" onclick="closeBlogModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="blogModalBody">
+                <!-- 博客内容 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 主题切换按钮 -->
+    <button class="theme-toggle" id="themeToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 100; width: 50px; height: 50px; border-radius: 50%; background: var(--glass-bg); backdrop-filter: blur(16px); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; color: var(--text-dark); cursor: pointer; transition: all 0.3s ease;" aria-label="切换主题">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
