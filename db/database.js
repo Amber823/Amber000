@@ -234,12 +234,25 @@ function createTables() {
 
 // 初始化默认数据
 function initDefaultData() {
-    // 检查管理员是否存在
-    const adminExists = db.exec("SELECT id FROM users WHERE username = 'Amber'");
-    if (adminExists.length === 0 || adminExists[0].values.length === 0) {
-        const hashedPassword = bcrypt.hashSync('Qjx0823!', 10);
+    // 检查并更新管理员账号
+    const adminExists = db.exec("SELECT id FROM users WHERE username = 'admin'");
+    const amberExists = db.exec("SELECT id FROM users WHERE username = 'Amber'");
+
+    const hashedPassword = bcrypt.hashSync('Qjx0823!', 10);
+
+    // 如果存在旧的admin账号，删除它
+    if (adminExists.length > 0 && adminExists[0].values.length > 0) {
+        db.run("DELETE FROM users WHERE username = 'admin'");
+    }
+
+    // 创建新账号（如果不存在）
+    if (amberExists.length === 0 || amberExists[0].values.length === 0) {
         db.run('INSERT INTO users (username, password, role) VALUES (?, ?, ?)', ['Amber', hashedPassword, 'admin']);
         console.log('✅ 默认管理员账户已创建: Amber / Qjx0823!');
+    } else {
+        // 如果Amber已存在，只更新密码
+        db.run("UPDATE users SET password = ? WHERE username = 'Amber'", [hashedPassword]);
+        console.log('✅ 管理员密码已更新: Amber / Qjx0823!');
     }
 
     // 初始化默认配置 - 屈佳欣(Amber)真实信息
