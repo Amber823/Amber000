@@ -267,16 +267,16 @@ function initDefaultData() {
         ['job_intent', '数据分析师（上海/苏州）'],
         ['expected_city', '上海、苏州'],
         ['expected_salary', '面议'],
-        ['bio', '本科经济统计学专业，拥有1年2个月知名家具企业海外事业部全职工作经验，深耕海外产品销售数据、业务运营数据全流程分析与管理工作，具备扎实的多维度数据拆解、内外部数据挖掘、市场调研及报告撰写能力。熟练运用SQL、Excel完成海量数据统计、清洗与可视化分析，可独立输出销售分析、市场调研、库存优化等专业报告，持有CDA Level1数据分析师认证。具备极强的数据敏感度、跨部门协调能力与执行力，擅长海量数据整理维护、市场机会挖掘、业务数据赋能，可快速适配快消行业数据分析、数据管理、决策支持等相关工作，精准为团队及管理层提供高效数据服务。'],
+        ['bio', '本科经济统计学专业，拥有1年半知名家具企业海外事业部全职工作经验，深耕海外产品销售数据、业务运营数据全流程分析与管理工作。具备扎实的多维度数据拆解、内外部数据挖掘、BI看板搭建、市场调研及报告撰写能力。熟练运用SQL、Excel完成海量数据统计、清洗及分析，利用Power BI/Tableau搭建用于管理层的数据面板，可独立输出销售分析、市场调研、库存优化等专业报告，持有CDA Level1数据分析师认证。具备极强的数据敏感度、跨部门协调能力与执行力，擅长海量数据整理维护、市场机会挖掘、业务数据赋能，可快速适配快消行业数据分析、数据管理、决策支持等相关工作，精准为团队及管理层提供高效数据服务。'],
         ['email', '3234260391@qq.com'],
         ['phone', '19525384607'],
         ['location', '陕西咸阳'],
-        ['work_years', '1年2个月'],
+        ['work_years', '1年半'],
         ['education_bg', '吉林财经大学 经济统计学 本科（GPA 4.16/5）'],
         ['certifications', 'CDA Level1、CET-4(519)、CET-6(461)、计算机二级'],
         ['skills_label', '技能特长'],
         ['works_label', '作品展示'],
-        ['blog_label', '博客文章'],
+        ['blog_label', '工作总结'],
         ['contact_label', '联系方式'],
         ['message_label', '留言板']
     ];
@@ -300,8 +300,8 @@ function initDefaultData() {
                 start_date: '2025.02',
                 end_date: '至今',
                 current: 1,
-                description: '负责海外产品销售数据分析、业务运营数据全流程分析管理工作，负责业务数据的日常监控、报表制作与数据可视化输出，支撑业务决策。',
-                achievements: '月度/季度/年度销售数据分析报告（800+次）|海关外部数据挖掘市场增长点|CIFF展会竞品调研PPT|库存周转指标体系搭建|累计处理数据8000+条|整理维护产品资料50000+条|翻译产品中文信息3000+|荣获闪耀新星奖项'
+                description: '负责海外产品销售数据分析、业务运营数据全流程分析管理工作。负责业务数据的日常监控、报表制作与数据可视化输出，支撑业务决策。负责海外部门的月度、季度、年度产品数据销售情况分析，从品类、大区、价格、部门等多维度下钻分析并输出分析报告，为管理层提供数据支持。',
+                achievements: '月度/季度/年度销售数据分析报告（800+次）|海关外部数据挖掘市场增长点|CIFF展会竞品调研PPT|库存周转指标体系搭建|BI看板搭建|累计处理数据80000+条|整理维护产品资料50000+条|翻译产品中文信息3000+|荣获闪耀新星奖项|荣获最佳赋能人员奖'
             }
         ];
 
@@ -336,6 +336,42 @@ function initDefaultData() {
     const projCount = db.exec('SELECT COUNT(*) as count FROM projects');
     if (projCount.length === 0 || projCount[0].values[0][0] === 0) {
         const sampleProjects = [
+            {
+                name: '海外销售经营可视化BI看板搭建',
+                role: '独立开发者',
+                start_date: '2025.03',
+                end_date: '2025.06',
+                description: '依托企业家具外销订单明细数据源，独立搭建全链路销售经营BI看板，覆盖首页导航、大区/业务员/客户/产品线四层钻取分析体系，替代传统Excel手工汇总报表，实现经营数据实时联动筛选、分层管控，支撑业务、管理层日常经营复盘与客户精细化运营。',
+                achievements: '告别每周Excel手工汇总，数据更新效率提升80%|ABC客户分层落地|多维度筛选+下钻交互，管理层10秒定位异常|报表云端共享，跨部门协同查阅',
+                technologies: 'Power BI、DAX函数、数据脱敏、ABC客户分类、RLS权限管理'
+            },
+            {
+                name: '库存周转率优化项目',
+                role: '项目负责人',
+                start_date: '2025.04',
+                end_date: '2025.06',
+                description: '搭建存销比指标体系监控业务员库存状态，基于每日最新库存数据量化库存周转情况，便于业务员及各部门负责人管理。',
+                achievements: '建立科学的库存预测模型|有效识别并清理低效库存|提升供应链响应效率',
+                technologies: 'Power BI、数据分析、库存管理'
+            },
+            {
+                name: '波士顿产品矩阵分析',
+                role: '项目负责人',
+                start_date: '2025.01',
+                end_date: '2025.03',
+                description: '运用波士顿矩阵模型对产品组合进行健康度诊断，从大区以及品类维度识别明星、金牛、问题、瘦狗产品，输出差异化运营策略。',
+                achievements: 'Power BI四象限散点图动态分类|产品结构诊断|支撑产品优化数据支撑',
+                technologies: 'Power BI、DAX函数、产品分析'
+            },
+            {
+                name: 'CIFF展会竞品调研',
+                role: '项目负责人',
+                start_date: '2025.03',
+                end_date: '2025.04',
+                description: '通过实地调研CIFF展会主要竞品，收集产品、价格、创新点等信息，输出竞品对比报告，为公司产品优化与市场策略提供数据支撑。',
+                achievements: '30页PPT竞品调研报告|价格对比数据帮助灵活调整报价策略',
+                technologies: '市场调研、竞品分析、PPT报告'
+            },
             {
                 name: '桑榆未晚，让"音"伴老——长春市老年人智能音箱市场现状及需求调查',
                 role: '项目负责人',
@@ -468,21 +504,21 @@ function initDefaultData() {
     const skillsCount = db.exec('SELECT COUNT(*) as count FROM skills');
     if (skillsCount.length === 0 || skillsCount[0].values[0][0] === 0) {
         const sampleSkills = [
-            { name: 'SQL', level: 88, category: '数据分析工具' },
-            { name: 'Excel', level: 90, category: '数据分析工具' },
+            { name: 'Power BI', level: 88, category: '数据可视化' },
+            { name: 'Tableau', level: 85, category: '数据可视化' },
+            { name: 'Excel', level: 92, category: '数据分析工具' },
             { name: 'Python', level: 80, category: '数据分析工具' },
-            { name: 'SPSS', level: 75, category: '数据分析工具' },
+            { name: 'SQL', level: 82, category: '数据分析工具' },
+            { name: 'SPSS', level: 72, category: '数据分析工具' },
             { name: 'R语言', level: 65, category: '数据分析工具' },
             { name: 'EViews', level: 60, category: '数据分析工具' },
-            { name: 'Tableau', level: 82, category: '可视化工具' },
-            { name: 'Power BI', level: 80, category: '可视化工具' },
             { name: 'MySQL', level: 78, category: '数据库' },
-            { name: 'PS', level: 60, category: '设计工具' },
+            { name: 'PS', level: 62, category: '设计工具' },
             { name: 'AI', level: 55, category: '设计工具' },
-            { name: 'Word/PPT', level: 85, category: '办公技能' },
+            { name: 'Word/PPT', level: 88, category: '办公技能' },
             { name: 'Access', level: 70, category: '办公技能' },
-            { name: '数据敏感度', level: 88, category: '业务能力' },
-            { name: '跨部门协调', level: 85, category: '软技能' },
+            { name: '数据敏感度', level: 90, category: '业务能力' },
+            { name: '跨部门协调', level: 85, category: '业务能力' },
             { name: '市场分析', level: 82, category: '业务能力' },
             { name: '报告撰写', level: 88, category: '业务能力' }
         ];
